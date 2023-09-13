@@ -1,16 +1,16 @@
 import React from 'react'
 
-function Button({ text, color, fontSize}) {
+Button.defaultProps = {
+  text: "Click Me!",
+  color: "blue",
+  fontSize: 12
+}
+
+function Button({ text, color, fontSize }) {
 
   const buttonStyle = {
     color: color,
     fontSize: fontSize + "px"
-  }
-
-  Button.defaultProps = {
-    text: "Click Me!",
-    color: "blue",
-    fonstSize: 12
   }
 
   return (
