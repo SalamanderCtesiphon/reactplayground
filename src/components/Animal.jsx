@@ -1,16 +1,27 @@
 import React from 'react'
 
+function ListItem(props) {
+  return <li>{props.animal}</li>
+}
+
+function List(props) {
+  return(
+    <ul>
+      {props.animals.map((animal) => {
+        return <ListItem key={animal} animal={animal} />
+      })}
+    </ul>
+  )
+}
+
 function Animal() {
 
   const animals = ["Lion", "Cow", "Snake", "Lizard"]
-  const animalsList = animals.map((animal) => <li key={animal}>{animal}</li>)
 
   return (
     <div>
       <h1>Animals: </h1>
-      <ul>
-        {animalsList}
-      </ul>
+      <List animals={animals} />
     </div>
   )
 }
