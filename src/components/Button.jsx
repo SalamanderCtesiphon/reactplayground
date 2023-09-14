@@ -6,7 +6,7 @@ Button.defaultProps = {
   fontSize: 12
 }
 
-function Button({ text, color, fontSize }) {
+function Button({ text="Click Me!", color="blue", fontSize=12, handleClick }) {
 
   const buttonStyle = {
     color: color,
@@ -14,7 +14,7 @@ function Button({ text, color, fontSize }) {
   }
 
   return (
-    <button style={buttonStyle}>{text}</button>
+    <button onClick={handleClick} style={buttonStyle}>{text}</button>
   )
 }
 
