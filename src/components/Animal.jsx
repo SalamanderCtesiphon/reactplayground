@@ -8,7 +8,7 @@ function List(props) {
   return(
     <ul>
       {props.animals.map((animal) => {
-        return animal.startsWith("L") ? <ListItem key={animal} animal={animal} /> : null
+        return animal.startsWith("L") && <ListItem key={animal} animal={animal} /> 
       })}
     </ul>
   )
