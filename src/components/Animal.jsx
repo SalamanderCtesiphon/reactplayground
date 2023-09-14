@@ -14,9 +14,10 @@ function List(props) {
   )
 }
 
-function Animal() {
+function Animal(props) {
 
   const animals = ["Lion", "Cow", "Snake", "Lizard"]
+
 
   return (
     <div>
